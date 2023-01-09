@@ -1,18 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = (props) => {
   const { search, onInputChange, onSearchClick } = props;
 
   return (
     <div className="jumbotron">
-      <h1 className="display-1">
-        <i className="material-icons brand-icon">fastfood</i> Food Recipe
-      </h1>
+      <Link to="/contact" className="custom-btn btn-contact">
+        Contact Us
+      </Link>
+      <h1 className="display-1">Food Recipe</h1>
       <div className="input-group w-50 mx-auto">
         <input
           type="text"
           className="form-control"
-          placeholder="Search Your Recipe..."
+          placeholder="Search for Recipe"
           value={search}
           onChange={onInputChange}
         />
